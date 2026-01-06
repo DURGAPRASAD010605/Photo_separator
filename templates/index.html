@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Photo Separator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Face Photo Separator</h1>
+    <p class="subtitle">
+        Upload a ZIP file containing photos.<br>
+        The system will group photos of the same person.
+    </p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label class="upload-box">
+            <input type="file" name="file" accept=".zip" required>
+            <span>Select ZIP File</span>
+        </label>
+
+        <button type="submit">Upload & Process</button>
+    </form>
+
+    <p class="note">
+        ⚠️ Processing time depends on number of photos and faces.
+    </p>
+</div>
+
+</body>
+</html>
